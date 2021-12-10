@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- jquery  -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- jquery  -->
+  <!-- bootstrap  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <!-- bootstrap  -->
+  <!-- google font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans" rel="stylesheet">
+  <!-- google font  -->
+  <!-- css  -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- css  -->
+  <!-- font-awesome  -->
+  <script src="https://use.fontawesome.com/d8a40b24d8.js"></script>
+  <!-- font-awesome  -->
+</head>
+
+<body>
+  <div id="message"></div>
+  <nav class="navbar shadow navbar-expand-md m-0 py-2" style="background-color: rgb(255, 255, 255);">
+    <!-- <a class="navbar-brand p-0 m-0" href=""><img src="imgs/logo.jpg" height="35" alt=""></a> -->
+    <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#collapsibleNavbar">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <button type="button" id="Login" onclick="redirectToLoginPage()"
+            class="active nav-buttons btn btn-md btn-block">Login</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" id="SignUp" onclick="redirectToSignUpPage()"
+            class="nav-buttons btn btn-md btn-block">SignUp</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="col-lg-4 col-sm-12 create-fields" style="margin: auto; margin-top: 8%;">
+      <h1 class="text-center">User Login</h1>
+      <form id='login-form' autocomplete="off">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required />
+          <datalist id="suggestion-list"> </datalist>
+        </div>
+        <div class="form-group">
+          <label for="Password">Password</label>
+          <input type="password" class="form-control" id="Password" name="Password" required />
+        </div>
+        <button type="button" class="btn btn-block login form-group" id="loginbtn" onclick="login()">
+          Login
+        </button>
+        <div class="row">
+          <div class="col text-center">
+            <p class="m-0">
+              <small>Don't have an Account?<br><a href="./signup.html">SignUp</a></small>
+            </p>
+          </div>
+          <div class="col text-center">
+            <p class="m-0">
+              <small>Forgot your password?<br><a href="./resetpassword.html">Reset Password</a></small>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- scripts -->
+  <script src="js/common.js"></script>
+  <script src="js/login.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- scripts -->
+</body>
+
+</html>
